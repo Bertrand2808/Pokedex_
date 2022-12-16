@@ -32,10 +32,10 @@ body {
   }
 }
 .card-title {
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-size: 32px;
   font-weight: normal;
-  margin-bottom: 0;
+  margin-bottom: 0px;
 }
 
 .card-subtitle {
