@@ -6,14 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="ie-edge" />
     <title>Pokedex</title>
     <link rel="stylesheet" href="app.css" />
-    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet"/>
+    <link
+      href="https://fonts.googleapis.com/css?family=Rubik&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   </head>
   <body>
-    <div class="container">
-      <h1>Pokedex</h1>
-      <ol id="pokedex"></ol>
+    <h1>Pokedex</h1>
+    <div class="wrap">
+      <div class="search">
+        <input
+          type="text"
+          class="searchTerm"
+          placeholder="What are you looking for?"
+        />
+        <button type="submit" class="searchButton">
+          <i class="fa fa-search" style="align-items: center;"></i>
+        </button>
+        <ul></ul>
+      </div>
     </div>
 
+    <div class="container">
+      <ol id="pokedex"></ol>
+    </div>
     <script src="app.js"></script>
   </body>
 </html>

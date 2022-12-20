@@ -1,33 +1,82 @@
 body {
   background: orangered;
-  margin :0;
+  margin: 0;
   font-family: rubik;
-  color : white;
+  color: white;
 }
 
-.card{
-  list-style : none;
+* {box-sizing: border-box;}
+form {
+  position: relative;
+  width: 300px;
+  margin: 0 auto;
+}
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #00B4CC;
+  border-right: none;
+  padding: 5px;
+  height: 40px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+.searchButton {
+  width: 40px;
+  height: 39px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 20%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.card {
+  list-style: none;
   padding: 40px;
   background: #f4f4f4;
-  color : #222;
+  color: #222;
   text-align: center;
 }
 
 .card:hover {
   animation: bounce 0.5s linear;
+  cursor: pointer;
 }
 
 @keyframes bounce {
-  20%{
+  20% {
     transform: translateY(-6px);
   }
-  40%{
+  40% {
     transform: translateY(0px);
   }
-  60%{
+  60% {
     transform: translateY(-2px);
   }
-  80%{
+  80% {
     transform: translateY(0px);
   }
 }
@@ -39,8 +88,8 @@ body {
 }
 
 .card-subtitle {
-  font-weight:  lighter;
-  color : #666;
+  font-weight: lighter;
+  color: #666;
   margin-bottom: 5px;
 }
 
@@ -48,10 +97,10 @@ body {
   height: 180px;
   margin: 0 auto;
 }
-#pokedex{
+#pokedex {
   padding-inline-start: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-gap: 20px;
 }
 
@@ -64,4 +113,38 @@ h1 {
   text-transform: uppercase;
   text-align: center;
   font-size: 54px;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: #f4f4f4;
+  opacity: 0.95;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#closeBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.button_close {
+  background-color: orangered;
+  padding: 10px 20px;
+  border: none;
+  color: white;
+  border-radius: 3px;
+  transition: transform 100ms;
+}
+
+.button_close:hover {
+  cursor: pointer;
+  transform: translate(-1px);
+  box-shadow: 0px 1px 2px darkred;
 }
